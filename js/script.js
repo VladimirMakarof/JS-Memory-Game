@@ -39,8 +39,21 @@
   // zero padding
   let setPad = (val) => (val < 10 ? '0' : '') + val;
 
+  // timer
+  let timerInt = null;
+  let timer = document.getElementById('timer');
+  const startTimer = () => {
+    let totalSeconds = 0;
+    timerInt = setInterval(() => {
+      totalSeconds++;
+      timer.innerText = setPad(parseInt(totalSeconds / 3600)) + ':' + setPad(parseInt(totalSeconds / 60) % 60) + ':' + setPad(totalSeconds % 60);
+    }, 1000);
+  }
+  const stopTimer = () => clearInterval(timerInt);
+
 
 
   makeBoard();
+  createPairs();
 
 })();
