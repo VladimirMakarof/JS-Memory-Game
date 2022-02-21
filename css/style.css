@@ -137,3 +137,46 @@ h1 {
   font-size: 14px;
   line-height: 20px;
 }
+.footer {
+  background-color: var(--prime-color-3);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px 50px;
+  font-size: 18px;
+}
+
+.github {
+  transition: color 0.5s;
+}
+
+.github:hover {
+  color: var(--prime-color-1);
+}
+
+.github:visited {
+  color: var(--prime-color-2);
+}
+
+.github:visited:hover {
+  color: var(--prime-color-1);
+}
+
+.footer__rss-icon {
+  width: 135px;
+  height: 50px;
+  fill: var(--prime-color-2);
+}
+
+.footer__rss-icon:hover {
+  fill: var(--prime-color-1);
+}
+
+.footer__copyrigth {
+  color: var(--prime-color-2);
+}
