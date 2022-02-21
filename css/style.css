@@ -1,0 +1,14 @@
+:root {
+  /* color */
+  --prime-color-1: #bdae82;
+  --prime-color-2: #ffffff;
+  --prime-color-3: #000000;
+
+  --main-side-color: #008000;
+  --won-side-color: #DC143C;
+  --selected-side-color: #4169E1;
+  --hover-side-color: #FFFF99;
+
+  /* font */
+  --main-font: 'Work Sans', sans-serif;
+}
