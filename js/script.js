@@ -36,6 +36,8 @@
     } while (number <= totalSquares / 2);
   }
 
+  // zero padding
+  let setPad = (val) => (val < 10 ? '0' : '') + val;
 
 
 
