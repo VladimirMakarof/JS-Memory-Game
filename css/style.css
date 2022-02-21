@@ -12,3 +12,128 @@
   /* font */
   --main-font: 'Work Sans', sans-serif;
 }
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--prime-color-2);
+  font-size: 16px;
+  font-family: var(--main-font);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  transition: 1s;
+}
+
+main {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+h1 {
+  margin: 15px 0;
+  text-align: center;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.description {
+  font-size: 12px;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#board {
+
+  margin: 0 auto;
+  max-width: 400px;
+  background-color: antiquewhite;
+  padding: 30px;
+  border-radius: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+
+}
+
+#board>.item {
+
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  color: var(--prime-color-2);
+  border: solid 1px #eee;
+  cursor: pointer;
+  background-color: var(--main-side-color);
+  border: solid 1px var(--main-side-color);
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#board>.item>b {
+  transition: opacity 0.5s;
+  opacity: 0;
+  font-size: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#board>.item>b.active {
+  opacity: 1;
+}
+
+#board>.item:hover,
+#board>.item:focus {
+  background-color: var(--hover-side-color);
+}
+
+#board>.item.opened,
+#board>.item.opened:hover,
+#board>.item.opened:focus {
+  background-color: var(--selected-side-color);
+}
+
+#board>.item.done,
+#board>.item.done:hover,
+#board>.item.done:focus {
+  background-color: var(--won-side-color);
+  cursor: default;
+}
+
+#result {
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+}
