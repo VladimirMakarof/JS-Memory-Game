@@ -180,3 +180,8 @@ h1 {
 .footer__copyrigth {
   color: var(--prime-color-2);
 }
+@media only screen and (max-width: 360px) {
+  #board {
+    padding: 20px;
+  }
+}
